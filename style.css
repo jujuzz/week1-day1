@@ -71,17 +71,25 @@ label {
     display: block;
     margin: 15px 0 0 0;
 }
-input {
+input, textarea {
     width: 300px;
 }
 input[type="radio"] {
     width: 25px;
 }
-textarea {
-    width: 300px;
-}
 input[type="submit"] {
     display: block;
     margin: 20px 0 10px 0;
     width: 100px;
+    background-color: #34c9b5;
+    border:none;
+    padding: 7px;
+    color: #fff;
+
+}
+fieldset {
+    border: 4px solid #34c9b5;
+}
+legend {
+    font-size: larger;
 }
