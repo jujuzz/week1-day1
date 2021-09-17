@@ -32,12 +32,12 @@
             <p>My Fourth Paragraph.</p>
             
             <ul id="album">
-                <li id="photo"><img src="images/winterland1.jpg"></li>
+                <!-- <li id="photo"><img src="images/winterland1.jpg"></li>
                 <li id="photo"><img src="images/winterland2.jpg"></li>
                 <li id="photo"><img src="images/winterland3.jpg"></li>
                 <li id="photo"><img src="images/winterland4.jpg"></li>
                 <li id="photo"><img src="images/winterland5.jpg"></li>
-                <li id="photo"><img src="images/winterland6.jpg"></li>
+                <li id="photo"><img src="images/winterland6.jpg"></li> -->
             </ul>
         </main>
 
@@ -47,6 +47,23 @@
         </footer>
     </div>
     <!--End container-->
-    
+    <script>
+        var photos = [];
+        var fieldNames = [];
+        var imageList = [];
+        var image;
+        var openList = "<li id='photo'>";
+        var closeList = "</li>";
+        
+        //create a loop to creat 6 images
+        for (var i = 0; i < 6; i++) {
+            fieldNames.push("winterland" + (i + 1));
+            photos.push("<img src='images/" + fieldNames[i] + ".jpg'>");
+            image = openList + photos[i] + closeList;
+            imageList.push(image);
+        }
+        //display all 6 images
+        document.getElementById("album").innerHTML = imageList;
+    </script>
 </body>
 </html>
